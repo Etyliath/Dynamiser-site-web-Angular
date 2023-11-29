@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "assets/scss/_variables_overrides.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+    font-family: "Bubbleboddy Neue Trial";
+    src: url("./assets/fonts/BubbleboddyNeueTrial-Regular.eot");
+    src: url("./assets/fonts/BubbleboddyNeueTrial-Regular.eot?#iefix")
+        format("embedded-opentype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Regular.woff2") format("woff2"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Regular.woff") format("woff"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Regular.ttf") format("truetype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Regular.svg#BubbleboddyNeueTrial-Regular")
+        format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Bubbleboddy Neue Trial";
+    src: url("./assets/fonts/BubbleboddyNeueTrial-Thin.eot");
+    src: url("./assets/fonts/BubbleboddyNeueTrial-Thin.eot?#iefix")
+        format("embedded-opentype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Thin.woff2") format("woff2"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Thin.woff") format("woff"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Thin.ttf") format("truetype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Thin.svg#BubbleboddyNeueTrial-Thin")
+        format("svg");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Bubbleboddy Neue Trial";
+    src: url("./assets/fonts/BubbleboddyNeueTrial-ExtraBold.eot");
+    src: url("./assets/fonts/BubbleboddyNeueTrial-ExtraBold.eot?#iefix")
+        format("embedded-opentype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-ExtraBold.woff2") format("woff2"),
+      url("./assets/fonts/BubbleboddyNeueTrial-ExtraBold.woff") format("woff"),
+      url("./assets/fonts/BubbleboddyNeueTrial-ExtraBold.ttf") format("truetype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-ExtraBold.svg#BubbleboddyNeueTrial-ExtraBold")
+        format("svg");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Bubbleboddy Neue Trial";
+    src: url("./assets/fonts/BubbleboddyNeueTrial-Bold.eot");
+    src: url("./assets/fonts/BubbleboddyNeueTrial-Bold.eot?#iefix")
+        format("embedded-opentype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Bold.woff2") format("woff2"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Bold.woff") format("woff"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Bold.ttf") format("truetype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Bold.svg#BubbleboddyNeueTrial-Bold")
+        format("svg");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Bubbleboddy Neue Trial";
+    src: url("./assets/fonts/BubbleboddyNeueTrial-Light.eot");
+    src: url("./assets/fonts/BubbleboddyNeueTrial-Light.eot?#iefix")
+        format("embedded-opentype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Light.woff2") format("woff2"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Light.woff") format("woff"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Light.ttf") format("truetype"),
+      url("./assets/fonts/BubbleboddyNeueTrial-Light.svg#BubbleboddyNeueTrial-Light")
+        format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  body {
+    background: $light;
+    color: $dark;
+  }
+  
