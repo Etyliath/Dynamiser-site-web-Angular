@@ -1,25 +1,27 @@
-<div class="container-fluid">
-  <h1 class="p-2">Au petit village</h1>
-  <p class="p-2">
-    <strong>“Au petit village”</strong> est une entreprise qui confectionne des
-    figurines inspirées de la bande dessinée Astérix et Obélix.
-  </p>
+<div class="container-fluid p-0">
+  <div class="mb-5 mt-4">
+    <h1 class="px-5">Au petit village</h1>
+    <p class="px-5">
+      Une entreprise qui confectionne des
+      figurines inspirées de la bande dessinée Astérix et Obélix.
+    </p>  
+  </div>
   <nav class="navbar bg-primary">
     <div class="container-fluid">
       <form class="d-flex" role="search">
         <input
           class="form-control me-2"
           type="search"
-          placeholder="Search"
+          placeholder="Chercher"
           aria-label="Search"
         />
-        <button class="btn btn-outline-secondary" type="submit">Search</button>
+        <button class="btn btn-outline-secondary" type="submit">Chercher</button>
+        <select class="form-select ms-3" aria-label="Default select example">
+          <option selected>tri par prix</option>
+          <option value="croissant">Prix croissant</option>
+          <option value="decroissant">Prix décroissant<</option>
+        </select>    
       </form>
     </div>
-    <select class="form-select" aria-label="Default select example">
-      <option selected>tri par prix</option>
-      <option value="croissant">Prix croissant</option>
-      <option value="decroissant">Prix décroissant<</option>
-    </select>
   </nav>
 </div>
