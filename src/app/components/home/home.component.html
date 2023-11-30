@@ -1,27 +1,62 @@
-<div class="container-fluid p-0">
-  <div class="mb-5 mt-4">
+<div class="container-fluid p-0 d-flex flex-column">
+  <div class="my-4">
     <h1 class="px-5">Au petit village</h1>
     <p class="px-5">
-      Une entreprise qui confectionne des
-      figurines inspirées de la bande dessinée Astérix et Obélix.
-    </p>  
+      Une entreprise qui confectionne des figurines inspirées de la bande
+      dessinée Astérix et Obélix.
+    </p>
   </div>
-  <nav class="navbar bg-primary">
+  <nav class="navbar bg-primary mx-4">
     <div class="container-fluid">
-      <form class="d-flex" role="search">
+      <form class="d-flex" role="search" (submit)="searchHandle($event)">
         <input
           class="form-control me-2"
           type="search"
           placeholder="Chercher"
           aria-label="Search"
+          #search
         />
-        <button class="btn btn-outline-secondary" type="submit">Chercher</button>
-        <select class="form-select ms-3" aria-label="Default select example">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchHandle($event)"
+        >
+          Chercher
+        </button>
+        <select
+          class="form-select ms-3"
+          aria-label="Default select example"
+          (change)="selectSortHandler($event)"
+        >
           <option selected>tri par prix</option>
           <option value="croissant">Prix croissant</option>
-          <option value="decroissant">Prix décroissant<</option>
-        </select>    
+          <option value="decroissant">Prix décroissant</option>
+        </select>
       </form>
     </div>
   </nav>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-0 m-4">
+    <div
+      *ngFor="
+        let product of productList
+          | filterByTitle : search.value
+          | sortByPrice : selectedSort
+      "
+    >
+      <div class="col">
+        <div class="card rounded-0 bg-primary">
+          <img [src]="product.photo" alt="" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title text-truncate">{{ product.title }}</h5>
+            <p class="card-text m-0">
+              <strong>{{ product.price }} €</strong>
+            </p>
+            <p class="card-text text-truncate">
+              {{ product.shortDSecription }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
