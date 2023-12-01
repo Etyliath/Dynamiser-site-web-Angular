@@ -1,0 +1,71 @@
+<div class=" container-fluid" style="margin-bottom: 180px">
+  <h1 class="mx-5">Nous contacter</h1>
+  <div *ngIf="formValid" class="alert alert-success" role="alert">
+    <p> Merci {{contactForm.value.firstName}} {{ contactForm.value.lastName }} pour votre message </p>
+  </div>
+  
+  <form
+    [formGroup]="contactForm"
+    class="mx-5 container mb-5"
+    (submit)="onSubmitForm()"
+  >
+    <div class="mb-3 d-flex flex-column container">
+      <div class="me-3 me-auto">
+        <label for="formControlInputFirstName" class="form-label">Prénom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formControlInputFirstName"
+          placeholder=""
+          formControlName="firstName"
+        />
+      </div>
+      <div class="me-auto">
+        <label for="formControlInputLastName" class="form-label">Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formControlInputLastName"
+          placeholder=""
+          formControlName="lastName"
+        />
+      </div>
+      <div class="mb-3 me-auto">
+        <label for="formControlInputMail" class="form-label"
+          >Adresse mail</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="formControlInputMail"
+          placeholder="name@example.com"
+          formControlName="email"
+        />
+      </div>
+      <div class="mb-3 me-auto">
+        <label for="formControlInputSubject" class="form-label">Sujet</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formControlInputSubject"
+          placeholder=""
+          formControlName="subject"
+        />
+      </div>
+      <div class="mb-3 me-auto">
+        <label for="formControlTextareaMessage" class="form-label"
+          >Message</label
+        >
+        <textarea
+          class="form-control"
+          id="formControlTextareaMessage"
+          rows="3"
+          formControlName="message"
+        ></textarea>
+      </div>
+      <div class="mb-3 ">
+        <button type="submit" class="btn btn-secondary mb-3" [disabled]="contactForm.invalid" >Envoyer</button>
+      </div>
+    </div>
+  </form>
+</div>
