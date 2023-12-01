@@ -8,23 +8,23 @@
   </div>
   <nav class="navbar bg-primary mx-5">
     <div class="container">
-      <form class="d-flex" role="search" (submit)="searchHandle($event)">
+      <form class="d-flex flex-column flex-sm-row g-1" role="search" (submit)="searchHandle($event)">
         <input
-          class="form-control me-2"
+          class="form-control m-2"
           type="search"
           placeholder="Chercher"
           aria-label="Search"
           #search
         />
         <button
-          class="btn btn-outline-secondary"
+          class="btn btn-outline-secondary m-2"
           type="button"
           (click)="searchHandle($event)"
         >
           Chercher
         </button>
         <select
-          class="form-select ms-3"
+          class="form-select m-2"
           aria-label="Default select example"
           (change)="selectSortHandler($event)"
         >
