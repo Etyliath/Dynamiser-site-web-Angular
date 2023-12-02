@@ -1,6 +1,11 @@
-<nav class="navbar navbar-expand-lg bg-primary">
+<nav class="navbar navbar-expand-lg bg-primary border-bottom border-secondary shadow">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+    <a
+      class="navbar-brand"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
       <img
         src="assets/images/Logo-au-petit-village.jpg"
         alt=""
@@ -20,8 +25,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavHeader">
       <div class="navbar-nav">
-        <a class="nav-link  active" aria-current="page" routerLink="about" routerLinkActive="active">A PROPOS</a>
-        <a class="nav-link " routerLink="contact" routerLinkActive="active">CONTACT</a>
+        <a
+          class="nav-link"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavHeader"
+          aria-current="page"
+          routerLink="about"
+          routerLinkActive="active"
+          >A PROPOS</a
+        >
+        <a
+          class="nav-link"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavHeader"
+          routerLink="contact"
+          routerLinkActive="active"
+          >CONTACT</a
+        >
       </div>
     </div>
   </div>
