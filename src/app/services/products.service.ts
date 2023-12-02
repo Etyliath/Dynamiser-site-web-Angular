@@ -11,5 +11,12 @@ export class ProductsService {
   getAllProducts(): Product[] {
     return this.ProductList;
   }
+  getProductById(productId:number){
+    const product=this.ProductList.find(product=>product.id===productId)
+    if(!product){
+      throw new Error('Produit introuvable')
+    }
+    return product
+  }
   constructor() { }
 }

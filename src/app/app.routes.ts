@@ -2,8 +2,14 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProductComponent } from './components/product/product.component';
 
 export const routes: Routes = [
+    {
+        path:'product/:id',
+        component:ProductComponent,
+        title:'Produit'
+    },
     {
         path:'',
         component:HomeComponent,

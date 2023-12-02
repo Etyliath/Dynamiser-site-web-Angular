@@ -4,6 +4,7 @@ import { Product } from '../../interfaces/product';
 import { ProductsService } from '../../services/products.service';
 import { SortByPricePipe } from '../../pipes/sort-by-price.pipe';
 import { FilterByTitlePipe } from '../../pipes/filter-by-title.pipe';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,13 +14,14 @@ import { FilterByTitlePipe } from '../../pipes/filter-by-title.pipe';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+
   selectedSort = '';
   search = '';
-
+  product!:Product;
   productList: Product[] = [];
   productService: ProductsService = inject(ProductsService);
 
-  constructor() {
+  constructor(private router:Router) {
     this.productList = this.productService.getAllProducts();
   }
 
@@ -30,4 +32,7 @@ export class HomeComponent {
     event.preventDefault();
     this.search = event.target.value;
   }
+  onViewProduct(productId:any) {
+    this.router.navigateByUrl(`/product/${productId}`)
+    }
 }
