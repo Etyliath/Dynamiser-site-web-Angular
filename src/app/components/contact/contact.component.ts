@@ -7,31 +7,49 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
   formValid = false;
+  submitted = false;
+  messageAlert = '';
+  classAlert = '';
   contactForm = this.formBuilder.group({
-    firstName: [null, Validators.required],
-    lastName: [null, Validators.required],
-    email: [null, Validators.required],
-    subject: [null, Validators.required],
-    message: [null, Validators.required],
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    subject: ['', Validators.required],
+    message: ['', Validators.required],
   });
   constructor(private formBuilder: FormBuilder) {}
   onSubmitForm() {
-    
-    this.formValid=true
-    setTimeout(()=>{
-      this.formValid=false
-      this.contactForm.reset()
-    },3000)
-    
+    this.submitted = true;
+    this.formValid = true;
+    if (this.contactForm.invalid) {
+      this.classAlert = 'alert alert-danger';
+      this.messageAlert = 'votre formulaire est mal remplit';
+    }
+    if (!this.contactForm.invalid) {
+      this.messageAlert = `Merci pour votre message ${this.contactForm.value.firstName} ${this.contactForm.value.lastName} `;
+      this.classAlert = 'alert alert-success';
+      setTimeout(() => {
+        this.submitted = false;
+        this.formValid = false;
+        this.contactForm.reset();
+      }, 3000);
+    }
+
+    // this.formValid = true;
+    // setTimeout(() => {
+    //   this.formValid = false;
+    //   this.contactForm.reset();
+    // }, 3000);
   }
 }
