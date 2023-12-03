@@ -1,14 +1,14 @@
-<div class="container-fluid p-0 " style="margin-bottom: 200px;">
-  <div class="my-4 mx-3 border border-secondary rounded-3 shadow">
+<main class="container-fluid p-0 " style="margin-bottom: 200px;">
+  <section class="my-4 mx-3 py-2 rounded-3 shadow">
     <h1 class="px-3">Au petit village</h1>
     <p class="px-3">
       Une entreprise qui confectionne des figurines inspirées de la bande
       dessinée Astérix et Obélix.
     </p>
-  </div>
-  <div class="p-2 mx-3 border border-secondary rounded-3 shadow">
+  </section>
+  <section class="p-2 mx-3 rounded-3 shadow">
     <h2 class="text-center">Catalogue des figurines</h2>
-    <nav class="navbar bg-primary mx-auto w-75 border border-secondary rounded-3 shadow">
+    <nav class="navbar bg-primary mx-auto rounded-3 shadow">
       <div class="container">
         <form class="d-flex flex-column flex-sm-row g-1" role="search" (submit)="searchHandle($event)">
           <input
@@ -19,7 +19,7 @@
             #search
           />
           <button
-            class="btn btn-outline-secondary m-2"
+            class="btn btn-secondary m-2"
             type="button"
             (click)="searchHandle($event)"
           >
@@ -38,7 +38,7 @@
       </div>
     </nav>
     <div
-      class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-0 my-4 p-2 mx-auto w-75 border border-secondary rounded-3 shadow"
+      class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-0 my-4 p-2 mx-auto rounded-3"
     >
       <div
         *ngFor="
@@ -69,5 +69,5 @@
       </div>
     </div>
   
-  </div>
-</div>
+  </section>
+</main>
