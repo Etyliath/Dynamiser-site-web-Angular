@@ -1,107 +1,138 @@
-<main class="container-fluid row mx-auto" style="margin-bottom: 250px">
-  <h1 class=" mx-auto">Contactez-nous</h1>
-  <div class="col col-md-4 col-lg-2 p-3 my-5 ms-3 rounded-3 bg-primary shadow">
-    <p>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
-      </svg>
-      20 hutte petitbonhomme<br />
-      29250 brocéliande<br />
-      FRANCE
-    </p>
-  </div>
-  <div class="col col-md-7 col-lg-4 p-3 my-5 ms-3 rounded-3 bg-primary shadow">
-    <div *ngIf="formValid" [class]="classAlert" role="alert">
+<main class="container-fluid mx-auto px-2" style="margin-bottom: 250px">
+  <h1 class="mx-auto">Contactez-nous</h1>
+  <div class="container-lg d-flex flex-column flex-sm-row">
+    <div class="flex-shrink-1 p-3 my-2 mx-3 rounded-3 bg-primary shadow">
       <p>
-        {{messageAlert}}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-geo-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"
+          />
+        </svg>
+        20 hutte petitbonhomme<br />
+        29250 brocéliande<br />
+        FRANCE
       </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91169.80795399343!2d-3.8310269787834454!3d48.397644941213244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48113995f1507bc3%3A0x7b06b4f63a30a512!2sFor%C3%AAt%20du%20Nivot!5e0!3m2!1sfr!2sfr!4v1701687676006!5m2!1sfr!2sfr"
+        width="280"
+        height="200"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="mx-auto"
+      ></iframe>
     </div>
-    <form
-      [formGroup]="contactForm"
-      class="row g-3 align-items-center"
-      (submit)="onSubmitForm()"
-    >
-      <div class="col-md-6">
-        <label for="formControlInputFirstName" class="form-label"
-          >Prénom</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="formControlInputFirstName"
-          required
-          formControlName="firstName"
-        />
-        <div *ngIf=" submitted && contactForm.get('firstName')?.invalid" class="alert alert-danger">
-          PréNom requis
+    <div class="flex-grow-1 p-3 my-2 mx-3 rounded-3 bg-primary shadow">
+      <div *ngIf="formValid" [class]="classAlert" role="alert">
+        <p>
+          {{ messageAlert }}
+        </p>
+      </div>
+      <form
+        [formGroup]="contactForm"
+        class="row g-3 align-items-center"
+        (submit)="onSubmitForm()"
+      >
+        <div class="col-md-6">
+          <label for="formControlInputFirstName" class="form-label"
+            >Prénom</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="formControlInputFirstName"
+            required
+            formControlName="firstName"
+          />
+          <div
+            *ngIf="submitted && contactForm.get('firstName')?.invalid"
+            class="alert alert-danger"
+          >
+            PréNom requis
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <label for="formControlInputLastName" class="form-label">Nom</label>
-        <input
-          type="text"
-          class="form-control"
-          id="formControlInputLastName"
-          required
-          formControlName="lastName"
-        />
-        <div *ngIf="submitted && contactForm.get('lastName')?.invalid" class="alert alert-danger">
-          nom  requis
+        <div class="col-md-6">
+          <label for="formControlInputLastName" class="form-label">Nom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formControlInputLastName"
+            required
+            formControlName="lastName"
+          />
+          <div
+            *ngIf="submitted && contactForm.get('lastName')?.invalid"
+            class="alert alert-danger"
+          >
+            nom requis
+          </div>
         </div>
-      </div>
-      <div class="col-md-12">
-        <label for="formControlInputMail" class="form-label"
-          >Adresse mail</label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="formControlInputMail"
-          placeholder="name@example.com"
-          required
-          formControlName="email"
-        />
-        <div *ngIf="submitted && contactForm.get('email')?.invalid" class="alert alert-danger">
-          mail pas bon
+        <div class="col-md-12">
+          <label for="formControlInputMail" class="form-label"
+            >Adresse mail</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="formControlInputMail"
+            placeholder="name@example.com"
+            required
+            formControlName="email"
+          />
+          <div
+            *ngIf="submitted && contactForm.get('email')?.invalid"
+            class="alert alert-danger"
+          >
+            mail pas bon
+          </div>
         </div>
-      </div>
-      <div class="md-12">
-        <label for="formControlInputSubject" class="form-label">Sujet</label>
-        <input
-          type="text"
-          class="form-control"
-          id="formControlInputSubject"
-          required
-          formControlName="subject"
-        />
-        <div *ngIf="submitted && contactForm.get('subject')?.invalid" class="alert alert-danger">
-          Sujet  requis
+        <div class="md-12">
+          <label for="formControlInputSubject" class="form-label">Sujet</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formControlInputSubject"
+            required
+            formControlName="subject"
+          />
+          <div
+            *ngIf="submitted && contactForm.get('subject')?.invalid"
+            class="alert alert-danger"
+          >
+            Sujet requis
+          </div>
         </div>
-      </div>
-      <div class="col-md-12">
-        <label for="formControlTextareaMessage" class="form-label"
-          >Message</label
-        >
-        <textarea
-          class="form-control"
-          id="formControlTextareaMessage"
-          rows="3"
-          required
-          formControlName="message"
-        ></textarea>
-        <div *ngIf="submitted && contactForm.get('message')?.invalid " class="alert alert-danger">
-          Message requis
+        <div class="col-md-12">
+          <label for="formControlTextareaMessage" class="form-label"
+            >Message</label
+          >
+          <textarea
+            class="form-control"
+            id="formControlTextareaMessage"
+            rows="3"
+            required
+            formControlName="message"
+          ></textarea>
+          <div
+            *ngIf="submitted && contactForm.get('message')?.invalid"
+            class="alert alert-danger"
+          >
+            Message requis
+          </div>
         </div>
-      </div>
-      <div class="col-md-12">
-        <button
-          type="submit"
-          class="btn btn-secondary"
-          
-        >
-          Envoyer
-        </button>
-      </div>
-    </form>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-secondary">Envoyer</button>
+        </div>
+      </form>
+    </div>
   </div>
 </main>
