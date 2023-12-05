@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductComponent } from './components/product/product.component';
 import { MentionsLegalesComponent } from './components/mentions-legales/mentions-legales.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,10 @@ export const routes: Routes = [
         path:'mentions',
         component:MentionsLegalesComponent,
         title:'Mentions légales'
+    },
+    {
+        path:'**',
+        component:PageNotFoundComponent,
+        title:'Page not found'
     }
 ];

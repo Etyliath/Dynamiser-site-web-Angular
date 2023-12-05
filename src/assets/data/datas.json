@@ -4,7 +4,11 @@
       "id": 0,
       "title": "Asterix",
       "shortDSecription": "figurine d'asterix",
-      "photo": "../../assets/images/asterix-4976983_640.jpg",
+      "photos":{
+        "photosmall": "../../assets/images/asterix-4976983_224.jpg",
+        "photoLarge": "../../assets/images/asterix-4976983_640.jpg"
+      },
+      
       "description": "figurine d'asterix fabriquer en bretagne dans le village gaulois",
       "price": 29
     },
@@ -12,7 +16,10 @@
       "id": 1,
       "title": "Obelix",
       "shortDSecription": "figurine d'Obelix",
-      "photo": "../../assets/images/asterix-4976983_640.jpg",
+      "photos":{
+        "photosmall": "../../assets/images/asterix-4976983_224.jpg",
+        "photoLarge": "../../assets/images/asterix-4976983_640.jpg"
+      },
       "description": "figurine d'Obelix fabriquer en bretagne dans le village gaulois",
       "price": 39
     },
@@ -20,7 +27,10 @@
       "id": 2,
       "title": "Idefix",
       "shortDSecription": "figurine d'Idefix",
-      "photo": "../../assets/images/asterix-4976983_640.jpg",
+      "photos":{
+        "photosmall": "../../assets/images/asterix-4976983_224.jpg",
+        "photoLarge": "../../assets/images/asterix-4976983_640.jpg"
+      },
       "description": "figurine d'Idefix fabriquer en bretagne dans le village gaulois",
       "price": 25
     },
@@ -28,7 +38,10 @@
       "id": 3,
       "title": "Panoramix",
       "shortDSecription": "figurine d'Panoramix",
-      "photo": "../../assets/images/asterix-4976983_640.jpg",
+      "photos":{
+        "photosmall": "../../assets/images/asterix-4976983_224.jpg",
+        "photoLarge": "../../assets/images/asterix-4976983_640.jpg"
+      },
       "description": "figurine d'Panoramix fabriquer en bretagne dans le village gaulois",
       "price": 19
     },
@@ -36,7 +49,10 @@
       "id": 4,
       "title": "Falbala",
       "shortDSecription": "figurine d'Falbala",
-      "photo": "../../assets/images/asterix-4976983_640.jpg",
+      "photos":{
+        "photosmall": "../../assets/images/asterix-4976983_224.jpg",
+        "photoLarge": "../../assets/images/asterix-4976983_640.jpg"
+      },
       "description": "figurine d'Falbala fabriquer en bretagne dans le village gaulois",
       "price": 49
     },
@@ -44,7 +60,10 @@
       "id": 5,
       "title": "Abraracourcix",
       "shortDSecription": "figurine d'Abraracourcix",
-      "photo": "../../assets/images/asterix-4976983_640.jpg",
+      "photos":{
+        "photosmall": "../../assets/images/asterix-4976983_224.jpg",
+        "photoLarge": "../../assets/images/asterix-4976983_640.jpg"
+      },
       "description": "figurine d'Abraracourcix fabriquer en bretagne dans le village gaulois",
       "price": 16
     },
@@ -52,7 +71,10 @@
       "id": 6,
       "title": "Assurancetourix",
       "shortDSecription": "figurine d'Assurancetourix",
-      "photo": "../../assets/images/asterix-4976983_640.jpg",
+      "photos":{
+        "photosmall": "../../assets/images/asterix-4976983_224.jpg",
+        "photoLarge": "../../assets/images/asterix-4976983_640.jpg"
+      },
       "description": "figurine d'Assurancetourix fabriquer en bretagne dans le village gaulois",
       "price": 29
     },
@@ -60,7 +82,10 @@
       "id": 7,
       "title": "Agecanonix",
       "shortDSecription": "figurine d'Agecanonix",
-      "photo": "../../assets/images/asterix-4976983_640.jpg",
+      "photos":{
+        "photosmall": "../../assets/images/asterix-4976983_224.jpg",
+        "photoLarge": "../../assets/images/asterix-4976983_640.jpg"
+      },
       "description": "figurine d'Agecanonix fabriquer en bretagne dans le village gaulois",
       "price": 18
     }
