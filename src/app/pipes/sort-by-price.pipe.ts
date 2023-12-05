@@ -24,8 +24,8 @@ export class SortByPricePipe implements PipeTransform {
       });
       default:
         return product.sort((a:any,b:any)=>{
-          if( a.price < b.price){return -1}
-          if( a.price > b.price){return 1}
+          // if( a.price < b.price){return -1}
+          // if( a.price > b.price){return 1}
           return 0
         });
         break;
