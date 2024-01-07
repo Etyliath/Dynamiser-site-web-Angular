@@ -45,11 +45,5 @@ export class ContactComponent {
         this.contactForm.reset();
       }, 3000);
     }
-
-    // this.formValid = true;
-    // setTimeout(() => {
-    //   this.formValid = false;
-    //   this.contactForm.reset();
-    // }, 3000);
   }
 }
