@@ -25,22 +25,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse fs-4" id="navbarNavHeader">
-      <div class="navbar-nav">
+      <div class="navbar-nav" >
         <a
           class="nav-link"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavHeader"
           aria-current="page"
           routerLink="about"
           routerLinkActive="active"
+          (click)="handleClassBurger()"
           >A PROPOS</a
         >
         <a
           class="nav-link"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavHeader"
           routerLink="contact"
           routerLinkActive="active"
+          (click)="handleClassBurger()"
           >CONTACT</a
         >
       </div>

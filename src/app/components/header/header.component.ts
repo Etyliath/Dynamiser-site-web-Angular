@@ -11,4 +11,8 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
 
+  handleClassBurger(){
+    document.querySelector('.navbar-collapse')?.classList.remove('show')
+  }
+
 }
